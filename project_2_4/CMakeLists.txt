@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(project_2_4)
+project(light_controller)
 
 set(CMAKE_CXX_STANDARD 17)
 
