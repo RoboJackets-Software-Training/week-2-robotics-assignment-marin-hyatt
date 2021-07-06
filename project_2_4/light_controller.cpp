@@ -24,10 +24,10 @@ public:
       case (RR) :
         if (input.car_sensor_s == 1 || input.car_sensor_n == 1) {
           current_state = RG;
-          time_since_light_change += 1;
+          time_since_light_change = 1;
         } else {
           current_state = GR;
-          time_since_light_change += 1;
+          time_since_light_change = 1;
         }
         break;
       case (GR) :
@@ -66,12 +66,12 @@ public:
         }
         break;
     }
-    
+    //std::cout << time_since_light_change << std::endl;
     return getLights();
   }
 
 private:
-  int time_since_light_change = 1;
+  int time_since_light_change = 0;
 
   //declare states;
   enum State {
